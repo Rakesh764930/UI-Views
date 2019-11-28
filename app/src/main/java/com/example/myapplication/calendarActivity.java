@@ -16,7 +16,7 @@ public class calendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
         calendarView=findViewById(R.id.cvDate);
         txt1=findViewById(R.id.txt1);
-        calendarView.setOnDateChangeListener (new CalendarView.OnDateChangeListener() {
+        calendarView.setOnDateChangeListener (new  CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
                 String date=(i1+1)+ "/" +i2+"/"+(i);
