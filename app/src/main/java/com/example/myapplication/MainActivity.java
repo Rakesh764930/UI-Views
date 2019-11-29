@@ -14,23 +14,27 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import java.sql.Array;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     RatingBar rbRating;
     ProgressBar pbBar;
     AutoCompleteTextView atcView;
     int progress_status = 0;
+
     Handler handler = new Handler();
     Button btn;
     CheckBox cb1, cb2, cb3, cb4, cb5;
-RadioGroup rgGender;
-RadioButton rbMale;
+    SeekBar seekBar2;
+
+
+    RadioGroup rgGender;
+    RadioButton rbMale;
     RadioButton rbFemale;
     RadioButton rbOthers;
-
+    TextView txt1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +69,12 @@ btn=findViewById(R.id.button);
 btn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        Intent intent=new Intent(MainActivity.this,calendarActivity.class);
+        Intent intent=new Intent(MainActivity.this, OtherActivity.class);
         startActivity(intent);
     }
 });
+
+
 
         // Radio buttons
         rgGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -83,6 +89,8 @@ btn.setOnClickListener(new View.OnClickListener() {
                     Toast.makeText(MainActivity.this, "You Chose Others", Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
         //progress bar
         pbBar = findViewById(R.id.pbBar);
