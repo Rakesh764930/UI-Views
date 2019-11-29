@@ -22,6 +22,8 @@ public class OtherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other);
 
+
+        //Seek bar
         seekBar=findViewById(R.id.seekBar);
         txt1=findViewById(R.id.txt1);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -42,6 +44,9 @@ public class OtherActivity extends AppCompatActivity {
 
             }
         });
+
+
+        //Floating action button
         fab1=findViewById(R.id.fab1);
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override

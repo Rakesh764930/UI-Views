@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //auto complete text view
+
         String[] countries = getResources().getStringArray(R.array.countries);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -65,7 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rbFemale=findViewById(R.id.rbFemale);
         rbOthers=findViewById(R.id.rbOthers);
 
-btn=findViewById(R.id.button);
+
+        //moving to next screen
+        btn=findViewById(R.id.button);
 btn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
@@ -100,7 +104,7 @@ btn.setOnClickListener(new View.OnClickListener() {
             public void run() {
                 while (progress_status < 100) {
                     progress_status++;
-                    android.os.SystemClock.sleep(50);
+                    android.os.SystemClock.sleep(500);
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
@@ -111,6 +115,9 @@ btn.setOnClickListener(new View.OnClickListener() {
 
             }
         }).start();
+
+
+
         cb1 = findViewById(R.id.cb1);
         cb2 = findViewById(R.id.cb2);
         cb3 = findViewById(R.id.cb3);
